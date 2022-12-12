@@ -2,13 +2,13 @@
 // inquirer, fs, util, and markdown
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+// const util = require('util');
 
-const generateMarkdown = require('./util/generateMarkdown')
+// const generateMarkdown = require('./util/generateMarkdown')
 // TODO: Create an array of questions for user input
 // User questions
 inquirer
-    .createPromptModule([
+    .prompt([
         {
             type: "input",
             message: 'What is the title of your project?',
