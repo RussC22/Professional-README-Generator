@@ -1,8 +1,12 @@
 # Professional README Generator Starter Code
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+# Decription
+
+This application will allow users to generate a professional README for a new project quickly and efficently.
 
 ## How to install, sign-up, or log-in
+
+To install this application, create a folder and initiate with node index inquirer in the integrated terminal.
 
 ## Technologies
 
