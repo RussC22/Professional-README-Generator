@@ -8,6 +8,10 @@ This application will allow users to generate a professional README for a new pr
 
 To install this application, create a folder and initiate with node index inquirer in the integrated terminal.
 
+## license
+
+MIT
+
 ## Technologies
 
 - javaScript
@@ -23,4 +27,6 @@ To install this application, create a folder and initiate with node index inquir
 
 ### Find a bug?
 
-If you found an issue or would like to submit an improvement to this project, please submit an issue using the issues tab above. If you would like to submit a PR with a fix, reference the issue you creatued!
+- If you found an issue or would like to submit an improvement to this project, submit an issue using the issues tab above.
+
+- If you would like to submit a PR with a fix, create a branch and reference the issue you created!
