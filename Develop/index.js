@@ -22,8 +22,8 @@ inquirer
         },
         {
             type: "input",
-            message: 'What is the name of your project?',
-            name: "title"
+            message: 'Table of contents.',
+            name: "Content Table"
         },
         {
             type: "input",
