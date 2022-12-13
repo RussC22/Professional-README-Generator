@@ -27,21 +27,45 @@ inquirer
         },
         {
             type: "input",
-            message: 'What is the name of your project?',
-            name: "title"
+            message: 'What do you need to install this application?',
+            name: "Installation"
         },
         {
             type: "input",
-            message: 'What is the name of your project?',
-            name: "title"
+            message: 'How is this application used?',
+            name: "Usage"
         },
         {
             type: "input",
-            message: 'What is the name of your project?',
-            name: "title"
+            message: 'What lisences are avaiable for use? (MIT & Apache)',
+            name: "License"
         },
-
-
+        {
+            type: "input",
+            message: 'Who contributed to this project?',
+            name: "Contributing"
+        },
+        {
+            type: "input",
+            message: 'What commands are needed to test this application?',
+            name: "Tests"
+        },
+        {
+            type: "input",
+            message: 'Contact information for inquiries.',
+            name: "Questions"
+        },
+        {
+            type: "input",
+            message: 'What is your Github username?',
+            name: "Username"
+        },
+        {
+            type: "input",
+            message: 'What is your email address?',
+            name: "Email"
+        },
+        
     ])
 
 // TODO: Create a function to write README file
