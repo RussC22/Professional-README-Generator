@@ -15,9 +15,8 @@ MIT
 ## Technologies
 
 - javaScript
-- HTML
-- CSS
 - Gitignore
+- Node.js
 
 ## What Professioanl README Generator Looks Like
 
