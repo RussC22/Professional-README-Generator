@@ -1,11 +1,12 @@
 // TODO: Include packages needed for this application
-// inquirer, fs, util, and markdown
+// inquirer and fs variables
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const util = require('util');
+
 
 // const generateMarkdown = require('./util/generateMarkdown')
-// TODO: Create an array of questions for user input
+
+
 // User questions
 inquirer
     .prompt([
@@ -48,7 +49,7 @@ function writeToFile(fileName, data) {
     fs.writeToFile(fileName,data, function(err){
     console.log(fileName), console.log(data)
         if(err){return console.log(err)}
-        else {console.log('sucess!')}
+        else {console.log('success!')}
 })
 }
 
@@ -59,10 +60,6 @@ function init() {
             writeToFile("README.md", generateMarkdown(data)); console.log(data)
         })
 }
-
-
-// Function call to initialize app
-init()
 
 
 
