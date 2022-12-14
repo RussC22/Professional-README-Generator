@@ -3,8 +3,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
-// const generateMarkdown = require('./utils/generateMarkdown');
+// var generateMarkdown = require('./utils/generateMarkdown');
 
 
 // User questions
@@ -22,7 +21,7 @@ inquirer
         },
         {
             type: "input",
-            message: 'Table of contents.',
+            message: 'Table of contents.(Installation,Usage,License, ect....)',
             name: "Content Table"
         },
         {
@@ -36,9 +35,11 @@ inquirer
             name: "Usage"
         },
         {
-            type: "input",
-            message: 'What lisences are avaiable for use? (MIT & Apache)',
-            name: "License"
+            type: "list",
+            name: "License",
+            message: 'Which lisences would you like to use? (MIT & Apache)',
+            choices: ['MIT','Apache']
+
         },
         {
             type: "input",
@@ -52,8 +53,8 @@ inquirer
         },
         {
             type: "input",
-            message: 'Contact information for inquiries.',
-            name: "Questions"
+            message: 'What technology is used for your application? ',
+            name: "Technologies"
         },
         {
             type: "input",
