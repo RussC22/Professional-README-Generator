@@ -27,6 +27,7 @@ function renderLicenseLink(license) {
 
 // The function that returns the license section of README
 function renderLicenseSection(license) {
+  console.log("error")
   if(license == "MIT"){
     return `MIT License
 
@@ -63,7 +64,7 @@ function renderLicenseSection(license) {
     {
       return 'error! Try again!'
     }
-
+  }
 // The function to generate markdown for README
 function generateMarkdown(data) {
   return `
@@ -80,8 +81,8 @@ function generateMarkdown(data) {
     *[Test](#tests)
     *[Questions](#questions)
   ## License
-    ${renderLicenseBadge(data.Badge)}
-    ${renderLicenseLink(data.Link)}
+    ${renderLicenseBadge(data.license)}
+    ${renderLicenseLink(data.license)}
     ${renderLicenseSection(data.license)}
   ## Installation
     - The following necessary dependencies must be installed to run the application.
@@ -95,6 +96,6 @@ function generateMarkdown(data) {
     - If you have any questions about the repo, open an issue or contact ${data.Usage}
 `
  }
-}
+
 module.exports = generateMarkdown;
 
