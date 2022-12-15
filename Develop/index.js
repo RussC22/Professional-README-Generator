@@ -18,8 +18,9 @@ const questions = [
   },
   {
     type: "input",
-    message: "Table of contents.(Installation,Usage,License, ect....)",
-    name: "Content Table",
+    message:
+      "Table of contents.(*Installation,*Usage,*License, *Contributing, *Test,*Questions,ect..)",
+    name: "Content",
   },
   {
     type: "input",

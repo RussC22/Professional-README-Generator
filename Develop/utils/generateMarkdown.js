@@ -1,34 +1,32 @@
 // The function that returns a license badge based on which license is passed in terminal
 function renderLicenseBadge(license) {
-  if (license == "MIT"){
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-    }
+  if (license == "MIT") {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  }
   if (license == "Apache 2.0") {
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0`
-    }
-    else (license == 'err')
-    {
-      return 'error! Try again!'
-    }
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0`;
+  } else license == "err";
+  {
+    return "error! Try again!";
+  }
 }
 // The function that returns the license link
 function renderLicenseLink(license) {
-  if (license == "MIT"){
-    return `https://choosealicense.com/licenses/mit/#`
-    }
-  if (license == "APache 2.0"){
-    return `https://opensource.org/licenses/Apache-2.0`
-    }
-    else (license == 'err')
-    {
-      return 'error! Try again!'
-    }
+  if (license == "MIT") {
+    return `https://choosealicense.com/licenses/mit/#`;
+  }
+  if (license == "APache 2.0") {
+    return `https://opensource.org/licenses/Apache-2.0`;
+  } else license == "err";
+  {
+    return "error! Try again!";
+  }
 }
 
 // The function that returns the license section of README
 function renderLicenseSection(license) {
-  console.log("error")
-  if(license == "MIT"){
+  console.log("error");
+  if (license == "MIT") {
     return `MIT License
 
       Copyright (c) [year] [fullname]
@@ -49,8 +47,8 @@ function renderLicenseSection(license) {
       AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
       LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-      SOFTWARE.`
-    }
+      SOFTWARE.`;
+  }
   if (license == "Apache 2.0") {
     return `Copyright <YEAR> <COPYRIGHT HOLDER>
 
@@ -58,13 +56,12 @@ function renderLicenseSection(license) {
       
       The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
       
-      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
-    }
-    else (license == 'err')
-    {
-      return 'error! Try again!'
-    }
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
+  } else license == "err";
+  {
+    return "error! Try again!";
   }
+}
 // The function to generate markdown for README
 function generateMarkdown(data) {
   return `
@@ -74,18 +71,15 @@ function generateMarkdown(data) {
     ${data.Description}
 
   ## Table of contents
-    *[Installation](#installation)
-    *[Usage](#usage)
-    *[License](#license)
-    *[Contributing](#contributing)
-    *[Test](#tests)
-    *[Questions](#questions)
+    ${data.Content}
   ## License
     ${renderLicenseBadge(data.license)}
     ${renderLicenseLink(data.license)}
     ${renderLicenseSection(data.license)}
   ## Installation
-    - The following necessary dependencies must be installed to run the application.
+    - The following ${
+      data.Installation
+    } is necessary dependencies must be installed to run the application.
   ## Usage
     - In order to use this app, ${data.Usage} license.
   ## Contributing
@@ -93,9 +87,10 @@ function generateMarkdown(data) {
   ## Tests
     - The following is needed to run the test: ${data.Tests}
   ## Questions
-    - If you have any questions about the repo, open an issue or contact ${data.Usage}
-`
- }
+    - If you have any questions about the repo, open an issue or contact ${
+      data.Usage
+    }
+`;
+}
 
 module.exports = generateMarkdown;
-
