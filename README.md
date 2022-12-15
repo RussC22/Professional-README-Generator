@@ -40,6 +40,8 @@ MIT License
 
 ## What Professioanl README Generator Looks Like
 
+<img width="2048" alt="READ ME Example" src="https://user-images.githubusercontent.com/114961971/207784097-444a1ef5-6d9a-417f-ae92-0006bd4f900d.png">
+
 ## Repository link
 
 - https://github.com/RussC22/Professional-README-Generator
