@@ -8,60 +8,24 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
   {
     type: "input",
-    message: "What is the title of your project?",
-    name: "title",
+    message: "Team members name?",
+    name: "Name",
   },
   {
     type: "input",
-    message: "What is your project about? The more details the better!",
-    name: "Description",
-  },
-  {
-    type: "input",
-    message:
-      "Table of contents.(*Installation,*Usage,*License, *Contributing, *Test,*Questions,ect..)",
-    name: "Content",
-  },
-  {
-    type: "input",
-    message: "What do you need to install this application?",
-    name: "Installation",
-  },
-  {
-    type: "input",
-    message: "How is this application used?",
-    name: "Usage",
+    message: "What is this team memebers position",
+    name: "Position",
   },
   {
     type: "list",
-    name: "license",
-    message: "Which lisences would you like to use? (MIT & Apache)",
-    choices: ["MIT", "Apache"],
+    name: "Contact",
+    message: "Choose your email or cell number.",
+    choices: ["Email", "Number"],
   },
   {
     type: "input",
-    message: "Who contributed to this project?",
-    name: "Contributing",
-  },
-  {
-    type: "input",
-    message: "What commands are needed to test this application?",
-    name: "Tests",
-  },
-  {
-    type: "input",
-    message: "What technology is used for your application? ",
-    name: "Technologies",
-  },
-  {
-    type: "input",
-    message: "What is your Github username?",
-    name: "Username",
-  },
-  {
-    type: "input",
-    message: "What is your email address?",
-    name: "Email",
+    message: "Who is this team members manager?",
+    name: "ManagerInfo",
   },
 ];
 
@@ -80,7 +44,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then(function (data) {
     console.log(data);
-    const filename = "./outbound/" + data.title + ".md";
+    const filename = "./outbound/" + data.title + ".html";
     writeToFile(filename, generateMarkdown(data));
   });
 }
