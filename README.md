@@ -45,6 +45,7 @@ MIT License
 ## Repository link
 
 - https://github.com/RussC22/Professional-README-Generator
+- Video walk-through: https://drive.google.com/file/d/1A9n4BJ6qY3wbA6kDg1wfgvU7Yk9g9tcL/view
 
 ## How to Use Professioanl README Generator Looks Like
 
